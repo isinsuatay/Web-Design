@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/d39c3b7e59.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+ 
+
+  <title>HELP</title>
+
+</head>
+<style>
+
+body {
+  font-family: 'Ysabeau Infant', sans-serif;
+  line-height: 1.6;
+}
+section{
+    margin-top: 200px;
+}
+</style>
+<body>
+ 
+  <!-- NavBar -->
+  <div class="imgContainer">
+    <img id="logo" src="./image/liceria2.png" width="130px" height="100px" alt="logo">
+    </div>
+  <nav>
+    <span id="sidenavOpenButton" style="font-size:30px;cursor:pointer" onclick="openNav()">
+        <i class="fa-solid fa-chair" ></i>
+    </span>
+    <div id="YanMenu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+
+        <a href="./index.html">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="./newCollection.html">NEW COLLECTION</a>
+        <a href="./sale.html">SALE</a>
+        <a href="./help.html">HELP</a>
+        <a href="./contact.html">CONTACT</a>
+    </div>
+
+    <input id="nav-toggle" type="checkbox" />
+    <label class='nav-button-container' for="nav-toggle">
+        <div class='nav-button'></div>
+    </label>
+
+    <ul class="nav">
+
+        <li>
+            <div class="dropdown">
+                <button class="dropdown-btn">COLLECTION</button>
+                <div class="dropdown-content">
+                    <a href="./furniture.html">
+                        <span>
+                            <img src="./image/img3.webp" alt="Resim 1">
+                            <h3>FURNITURE</h3>
+                        </span>
+                        <ul>
+                            <li>Tables</li>
+                            <li>Seating</li>
+                            <li>Mirrors</li>
+                        </ul>
+                    </a>
+                    <a href="./lighting.html">
+                        <span>
+                            <img src="./image/dropdown-2.jpeg" alt="Resim 2">
+                            <h3>LIGHTING</h3>
+                        </span>
+                        <ul>
+                            <li>Floor Lights</li>
+                            <li>Table Lamps</li>
+                            <li>Wall Lights</li>
+                        </ul>
+                    </a>
+                    <a href="./object.html">
+                        <span>
+                            <img src="./image/img2.webp" alt="Resim 3">
+                            <h3>OBJECT & TEXTILES</h3>
+                        </span>
+                        <ul>
+                            <li>Objects</li>
+                            <li>Textiles</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li><a href="./index.html">
+                <i id="home" class="fa-solid fa-house" style="color:#d5ccc2 ;"></i>
+            </a>
+        </li>
+        <li>
+            <a style="text-decoration: none;" href="./cart.html" id="cart-icon" >
+                <i class="fa-solid fa-bag-shopping" style="color:#d5ccc2 ;"></i>
+                <span style="color: #d5ccc2;" id="cart-item-count">0</span>
+            </a>
+        </li>
+        <li id="login-signin"><button id="loginBtn">Log In</button>
+
+            <div class="popup" id="loginPopup">
+                <div class="popup-content">
+                    <span class="close" id="loginCloseBtn">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </span>
+                    <h2>Log In</h2>
+                    <form id="loginForm">
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+
+            <button id="registerBtn">Sign In</button>
+
+            <div class="popup" id="registerPopup">
+                <div class="popup-content">
+                    <span class="close" id="registerCloseBtn">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </span>
+                    <h2>Sign In</h2>
+                    <form id="registerForm">
+                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Surname" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit">Sign In</button>
+                    </form>
+                </div>
+            </div>
+
+            <button id="logoutBtn" style="display: none;">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+        </li>
+    </ul>
+</nav>
+
+<section>
+  <h2>FREQUENTLY ASKED QUESTIONS</h2>
+
+<div id="accordion">
+  <h3>HOW CAN I ORDER?</h3>
+  <div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut mollitia atque nobis doloremque minima rem, iure quia eligendi vitae doloribus dolores harum eos error ex nesciunt veniam labore beatae, quasi dolor excepturi blanditiis. At, ea eius cupiditate est quia quae eaque sint fugiat ullam in modi sed, voluptatum tempora quod.</p>
+  </div>
+  <h3>PAYMENT</h3>
+  <div>
+    <p>You can pay using the following payment methods:</p>
+    <ul>
+        <li><i class="fa-brands fa-cc-visa"></i></li>
+        <li><i class="fa-brands fa-cc-mastercard"></i></li>
+        <li><i class="fa-solid fa-gift"></i></li>
+    </ul>
+    <p>You can shop online with peace of mind because we make great efforts to ensure the security of your purchases and your information.</p>
+  </div>
+  <h3>CONTACT</h3>
+  <div>
+    <p>You can reach our support team with the following information:</p>
+    <ul>
+      <li>E-mail: help@liceria.com</li>
+      <li>Phone: 0000 000 00 00</li>
+    </ul>
+
+  </div>
+
+</div>
+</section>
+
+   <footer>
+    <form>
+        <input type="email" id="email" placeholder="JOIN OUR NEWSLETTER- ENTER YOUR EMAİL">
+        <label for="email"></label>
+        <div class="line"></div>
+    
+     
+      <div id="checkboxContainer" style="display: none;">
+        <label for="checkbox">I have read and accept the <a href="./indexP.html">Privacy Policy</a>
+        </label>
+        <input type="checkbox" id="checkbox" name="checkbox">
+      </div>
+    </form>
+    
+      <button id="subscribe">SUBSCRIBE ME</button>
+    
+      <div class="part">
+        <div class="left">
+            <h5>Follow us on</h5>
+            <div class="line2"></div>
+    
+            <ul>
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-pinterest-p"></i></li>
+            </ul>
+        </div>
+        <div class="right">
+            <h5>Download our app</h5>
+            <div class="line2"></div>
+    
+            <img src="./image/Unknown.png" width="60px" height="60px" alt="">
+        </div>
+      </div>
+    
+      <div class="lastPart">
+        <ul>
+            <li>
+                <ul>POLICIES
+                    <br><br>
+
+                    <li><a href="">TERMS AND CONDITIONS</a></li>
+                    <li><a href="./indexP.html">PRIVACY POLICY</a></li>
+                    <li><a href="">COOKIES POLICY</a></li>
+                    <li><a href="">COOKIES SETTINGS</a>
+                    </li>
+                </ul>
+            </li>
+            </ul>
+            <ul>
+            <li> 
+                <ul>COMPANY
+                    <br><br>
+                    <li><a href="">WORK WITH US</a></li>
+                    <li><a href="">PRESS</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>CONTACT
+
+                    <br><br>
+                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="">HELP</a></li>
+                    <li><a href="">STORES</a></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+    
+    </footer>
+
+
+    <script>
+      $( function() {
+        $( "#accordion" ).accordion();
+      } );
+      $(document).ready(function() {
+        $("section h3").css("background-color", "#d5ccc2");
+        $("section h3").css("border","#d5ccc2");
+        $("div").css("font-family"," 'Ysabeau Infant', sans-serif");
+        $("div").css("font-size","1.2rem");
+        $("section").css("padding","2rem");
+
+      });
+      </script>
+    <script src="./main.js"></script>
+</body>
+</html>

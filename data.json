@@ -1,0 +1,605 @@
+[
+    {
+        "id": 1,
+        "name": " DINING CHAIR",
+        "price": 750,
+        "src": "./image/img-1.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 2,
+        "name": "BERGERE",
+        "price": 1700,
+        "src": "./image/img-3.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 3,
+        "name": "BERGERE",
+        "price": 1000,
+        "src": "./image/img-5.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 4,
+        "name": "BERGERE",
+        "price": 900,
+        "src": "./image/img-6.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 5,
+        "name": "BERGERE",
+        "price": 1100,
+        "src": "./image/img-73.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 6,
+        "name": "BERGERE",
+        "price": 600,
+        "src": "./image/img-74.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 7,
+        "name": "CORNER SOFA",
+        "price": 5000,
+        "src": "./image/img-9.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 8,
+        "name": " SOFA",
+        "price": 6300,
+        "src": "./image/img-12.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 9,
+        "name": "SOFA",
+        "price": 3000,
+        "src": "./image/img-53.jpg",
+        "category": "furniture"
+    },
+    {
+        "id": 10,
+        "name": "SOFA",
+        "price": 5000,
+        "src": "./image/img-54.jpg",
+        "category": "furniture"
+    },
+    {
+        "id": 11,
+        "name": "PIER GLASS",
+        "price": 450,
+        "src": "./image/img-19.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 12,
+        "name": "MIRROR",
+        "price": 1300,
+        "src": "./image/img-65.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 13,
+        "name": "PIER GLASS",
+        "price": 750,
+        "src": "./image/img-22.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 14,
+        "name": "PIER GLASS",
+        "price": 500,
+        "src": "./image/img-24.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 15,
+        "name": "MIRROR",
+        "price": 900,
+        "src": "./image/img-67.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 16,
+        "name": "MIRROR",
+        "price": 600,
+        "src": "./image/img-68.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 17,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-14.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 18,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-15.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 19,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-16.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 20,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-17.jpeg",
+        "category": "furniture"
+    },
+    {
+        "id": 21,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-49.jpg",
+        "category": "furniture"
+    },
+    {
+        "id": 22,
+        "name": "LAMP",
+        "price": 600,
+        "src": "./image/img-27.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 23,
+        "name": "LAMP",
+        "price": 900,
+        "src": "./image/img-28.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 24,
+        "name": "LAMP",
+        "price": 600,
+        "src": "./image/img-29.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 25,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-30.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 26,
+        "name": "LAMP",
+        "price": 560,
+        "src": "./image/img-66.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 27,
+        "name": "MIRROR",
+        "price": 300,
+        "src": "./image/img-25.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 28,
+        "name": "MIRROR",
+        "price": 500,
+        "src": "./image/img-75.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 29,
+        "name": "MIRROR",
+        "price": 500,
+        "src": "./image/img-77.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 30,
+        "name": "MIRROR",
+        "price": 500,
+        "src": "./image/img-78.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 31,
+        "name": "MIRROR",
+        "price": 500,
+        "src": "./image/img-83.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 32,
+        "name": "MIRROR",
+        "price": 500,
+        "src": "./image/img-84.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 33,
+        "name": "MIRROR",
+        "price": 500,
+        "src": "./image/img-87.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 34,
+        "name": "MIRROR",
+        "price": 500,
+        "src": "./image/img-90.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 35,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-92.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 36,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-93.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 37,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-96.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 38,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-104.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 39,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-106.jpeg",
+        "category": "light"
+    },
+    {
+        "id": 40,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-31.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 41,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-36.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 42,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-39.jpg",
+        "category": "obje"
+    },
+    {
+        "id": 43,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-108.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 44,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-43.jpg",
+        "category": "obje"
+    },
+    {
+        "id": 45,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-109.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 46,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-113.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 47,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-115.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 48,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-116.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 49,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-121.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 50,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-123.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 51,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-129.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 52,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-127.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 53,
+        "name": "LAMP",
+        "price": 500,
+        "src": "./image/img-128.jpeg",
+        "category": "obje"
+    },
+    {
+        "id": 54,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-150.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 55,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-170.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 56,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-131.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 57,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-172.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 58,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-148.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 59,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-139.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 60,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-135.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 61,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-138.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 62,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-172.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 63,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-131.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 64,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-140.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 65,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-156.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 66,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-181.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 67,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-182.jpeg",
+        "category": "sale"
+    },
+    {
+        "id": 68,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-155.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 69,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-157.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 70,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-153.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 71,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-188.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 72,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-189.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 73,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-190.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 74,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-142.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 75,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-143.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 76,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-130.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 77,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-162.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 78,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-171.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 79,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-185.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 80,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-186.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 81,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-184.jpeg",
+        "category": "newCollection"
+    },
+    {
+        "id": 82,
+        "name": "LAMP",
+        "price": 500,
+        "price2": 300,
+        "src": "./image/img-191.jpeg",
+        "category": "newCollection"
+    }
+]
