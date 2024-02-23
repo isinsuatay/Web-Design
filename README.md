@@ -52,6 +52,8 @@ Liceria is an e-commerce platform built with Python Django.
 
 - Python 3
 - Django
+- Sqlite3
+- Json
 - HTML/CSS
 - JavaScript
 
