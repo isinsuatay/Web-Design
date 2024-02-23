@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}LOGIN{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <h2>LOGIN</h2>
+    {% if user.is_authenticated %}
+        <p>USER: {{ user.username }}</p>
+        <form action="{% url 'accounts:logout' %}" method="post">
+            {% csrf_token %}
+            <button id="logoutButton" type="submit">Logout</button>
+        </form>
+    {% else %}
+        <form action="{% url 'accounts:login' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button id="login-register-button" type="submit">LOGIN</button>
+        </form>
+          <a style="color:#000" href="{% url 'accounts:register' %}">Sign Up</a>
+    {% endif %}
+  </div>
+{% endblock %}
+
+    

@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d39c3b7e59.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>LICERIA</title>
+
+</head>
+
+
+<header>
+ 
+    <nav>
+        <span id="sidenavOpenButton" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <i class="fa-solid fa-chair"></i>
+        </span>
+        <div id="YanMenu" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+
+            <a href="{% url 'HomePage' %}">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="{% url 'category_products' category_slug='newcollection' %}">NEW COLECTION</a>
+            <a href="{% url 'category_products' category_slug='sale' %}">SALE</a>
+            <a href="{% url 'help' %}">HELP</a>
+            <a href="{% url 'contact' %}">CONTACT</a>
+
+        </div>
+
+        <input id="nav-toggle" type="checkbox" />
+        <label class='nav-button-container' for="nav-toggle">
+            <div class='nav-button'></div>
+        </label>
+
+        <ul class="nav">
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-btn">COLLECTION</button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'category_products' category_slug='furniture' %}">
+                            <span>
+                                <img src="{% static './image/img3.webp' %}" alt="Resim 1">
+                                <h3>FURNITURE</h3>
+                            </span>
+                            <ul>
+                                <li>Tables</li>
+                                <li>Seating</li>
+                                <li>Mirrors</li>
+                            </ul>
+                        </a>
+                        <a href="{% url 'category_products' category_slug='light' %}">
+                            <span>
+                                <img src="{% static './image/dropdown-2.jpeg' %}" alt="Resim 2">
+                                <h3>LIGHTING</h3>
+                            </span>
+                            <ul>
+                                <li>Floor Lights</li>
+                                <li>Table Lamps</li>
+                                <li>Wall Lights</li>
+                            </ul>
+                        </a>
+                        <a href="{% url 'category_products' category_slug='obje' %}">
+                            <span>
+                                <img src="{% static './image/img2.webp' %}" alt="Resim 3">
+                                <h3>OBJECT & TEXTILES</h3>
+                            </span>
+                            <ul>
+                                <li>Objects</li>
+                                <li>Textiles</li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="{% url 'HomePage' %}">
+                    <i id="home" class="fa-solid fa-house" style="color:#d5ccc2 ;"></i>
+                </a>
+            </li>
+            <li>
+                <a style="text-decoration: none;" href="{% url 'cart' %}" id="">
+                    <i class="fa-solid fa-bag-shopping" style="color:#d5ccc2 ;"></i>
+                </a>
+            </li>
+
+            <li id="login-signin">
+                {% if user.is_authenticated %}
+                <a href="{% url 'accounts:logout' %}">
+                    <button class="login-register-btn">Log Out</button>
+                </a>
+                {% else %}
+                <a href="{% url 'accounts:login' %}">
+                    <button class="login-register-btn">Log In</button>
+                </a>
+                <a href="{% url 'accounts:register' %}">
+                    <button class="login-register-btn">Sign Up</button>
+                </a>
+                {% endif %}
+            </li>
+
+
+
+
+        </ul>
+    </nav>
+
+</header>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<footer>
+    <form>
+        <input type="email" id="email" placeholder="JOIN OUR NEWSLETTER- ENTER YOUR EMAİL">
+        <label for="email"></label>
+        <div class="line"></div>
+
+
+        <div id="checkboxContainer" style="display: none;">
+            <label for="checkbox">I have read and accept the <a href="./indexP.html">Privacy Policy</a>
+            </label>
+            <input type="checkbox" id="checkbox" name="checkbox">
+        </div>
+    </form>
+
+    <button id="subscribe">SUBSCRIBE ME</button>
+
+    <div class="part">
+        <div class="left">
+            <h5>Follow us on</h5>
+            <div class="line2"></div>
+
+            <ul>
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-pinterest-p"></i></li>
+            </ul>
+        </div>
+        <div class="right">
+            <h5>Download our app</h5>
+            <div class="line2"></div>
+
+            <img src="{% static './image/Unknown.png' %}" width="60px" height="60px" alt="">
+        </div>
+    </div>
+
+    <div class="lastPart">
+        <ul>
+            <li>
+                <ul>POLICIES
+                    <br><br>
+
+                    <li><a href="">TERMS AND CONDITIONS</a></li>
+                    <li><a href="./indexP.html">PRIVACY POLICY</a></li>
+                    <li><a href="">COOKIES POLICY</a></li>
+                    <li><a href="">COOKIES SETTINGS</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>COMPANY
+                    <br><br>
+                    <li><a href="">WORK WITH US</a></li>
+                    <li><a href="">PRESS</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>CONTACT
+
+                    <br><br>
+                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="">HELP</a></li>
+                    <li><a href="">STORES</a></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</footer>
+
+<script src="https://kit.fontawesome.com/d39c3b7e59.js" crossorigin="anonymous"></script>
+<script src="{% static 'javascript/main.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $(".add-to-cart").click(function (event) {
+            event.preventDefault();
+
+            let product_id = $(this).siblings('input[name="product_id"]').val();
+            let product_src = $(this).siblings('input[name="product_src"]').val();
+            let product_price = $(this).siblings('input[name="product_price"]').val();
+
+            $.ajax({
+                url: '/add-to-cart/',
+                type: 'GET',
+                data: {
+                    'product_id': product_id,
+                    'product_src': product_src,
+                    'product_price': product_price,
+                },
+                success: function (data) {
+                    alert(data.message);
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    });
+
+</script>
+</body>
+
+</html>

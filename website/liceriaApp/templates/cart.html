@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="innerMainSite">
+    <div class="product-list">
+        <div id="cart-items">
+            {% for item in cart_items %}
+            <div class="cart">
+                <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                <p>{{ item.product.name }}</p>
+                <p>{{ item.product.price }}</p>
+                <div class="quantityClass">
+                    <button class="quantity" onclick="changeQuantity('{{ item.id }}', 'decrease')">-</button>
+                    <span class="quantity" id="quantity_{{ item.id }}">{{ item.quantity }}</span>
+                    <button class="quantity" onclick="changeQuantity('{{ item.id }}', 'increase')">+</button>
+                </div>
+                <button class="cartBtn" onclick="deleteCartItem('{{ item.id }}')">Delete</button>
+            </div>
+            {% endfor %}
+        </div>
+        <div id="purchase">
+            <button class="cartBtn" onclick="clearCart()">Clear Cart</button>
+            <span class="total">Total Items: <span id="total_items">{{ total_items }}</span></span>
+            <span class="total">Total Cart Price: <span id="total_price">{{ total_price }}</span></span>
+        </div>
+        <button id="buyBtn" data-authenticated="{{ user.is_authenticated|yesno:'true,false' }}">BUY</button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#buyBtn").click(function (event) {
+            event.preventDefault();
+            
+            let isAuthenticated = $(this).data('authenticated');
+            
+            if (isAuthenticated === "true") {
+                $.ajax({
+                    url: '/checkout/',
+                    type: 'GET',
+                    success: function (data) {
+                        window.location.href = '/order_confirmation/';
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(xhr.responseText);
+                        alert('Please Try Again.');
+                    }
+                });
+            } else {
+                alert('Please log in to proceed with the purchase.');
+            }
+        });
+    });
+
+    function changeQuantity(cartItemId, action) {
+        let quantitySpan = document.getElementById('quantity_' + cartItemId);
+        let currentQuantity = parseInt(quantitySpan.textContent);
+        let totalItemsSpan = document.getElementById('total_items');
+        let totalPriceSpan = document.getElementById('total_price');
+
+        if (action === 'increase') {
+            quantitySpan.textContent = currentQuantity + 1;
+        } else if (action === 'decrease' && currentQuantity > 1) {
+            quantitySpan.textContent = currentQuantity - 1;
+        }
+
+        $.ajax({
+            url: `/change-cart-item-quantity/${cartItemId}/?action=${action}`,
+            type: 'GET',
+            success: function (data) {
+                totalItemsSpan.textContent = data.total_items;
+                totalPriceSpan.textContent = data.total_price;
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    }
+
+    function deleteCartItem(cartItemId) {
+        $.ajax({
+            url: `/delete-cart-item/${cartItemId}/`,
+            type: 'GET',
+            success: function (data) {
+                alert('Product removed from cart successfully!');
+                location.reload();
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    }
+
+    function clearCart() {
+        $.ajax({
+            url: '/clear-cart/',
+            type: 'GET',
+            success: function (data) {
+                location.reload();
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    }
+</script>
+{% endblock %}

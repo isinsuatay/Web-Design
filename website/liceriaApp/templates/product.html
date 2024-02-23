@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<title>{{ category.name }}</title>
+
+<div class="innerMainSite">
+    <div id="product-list">
+        {% for product in products %}
+        <div class="product-item">
+            {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% endif %}
+            <h3>{{ product.name }}</h3>
+            <p>Price: ${{ product.price }}</p>
+            <form id="add-to-cart-form" method="GET" action="/add-to-cart/">
+                <input type="hidden" name="product_id" value="{{ product.id }}">
+                <input type="hidden" name="product_src" value="{{ product.src }}">
+                <input type="hidden" name="product_price" value="{{ product.price }}">
+                <button type="submit" class="add-to-cart">Add to Cart</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% if products.has_other_pages %}
+<div class="pagination">
+    {% if products.has_previous %}
+    <a href="?page=1">&laquo; First</a>
+    <a href="?page={{ products.previous_page_number }}">Previous</a>
+    {% endif %}
+    {% for i in products.paginator.page_range %}
+    {% if products.number == i %}
+    <span class="current">{{ i }}</span>
+    {% else %}
+    <a href="?page={{ i }}">{{ i }}</a>
+    {% endif %}
+    {% endfor %}
+    {% if products.has_next %}
+    <a href="?page={{ products.next_page_number }}">Next</a>
+    <a href="?page={{ products.paginator.num_pages }}">Last &raquo;</a>
+    {% endif %}
+</div>
+{% endif %}
+<script>
+    
+</script>
+
+
+{% endblock %}

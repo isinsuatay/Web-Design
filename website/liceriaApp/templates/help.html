@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  
+<section>
+  <h2>FREQUENTLY ASKED QUESTIONS</h2>
+<div id="accordion">
+  <h3>HOW CAN I ORDER?</h3>
+  <div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut mollitia atque nobis doloremque minima rem, iure quia eligendi vitae doloribus dolores harum eos error ex nesciunt veniam labore beatae, quasi dolor excepturi blanditiis. At, ea eius cupiditate est quia quae eaque sint fugiat ullam in modi sed, voluptatum tempora quod.</p>
+  </div>
+  <h3>PAYMENT</h3>
+  <div>
+    <p>You can pay using the following payment methods:</p>
+    <ul>
+        <li><i class="fa-brands fa-cc-visa"></i></li>
+        <li><i class="fa-brands fa-cc-mastercard"></i></li>
+        <li><i class="fa-solid fa-gift"></i></li>
+    </ul>
+    <p>You can shop online with peace of mind because we make great efforts to ensure the security of your purchases and your information.</p>
+  </div>
+  <h3>CONTACT</h3>
+  <div>
+    <p>You can reach our support team with the following information:</p>
+    <ul>
+      <li>E-mail: help@liceria.com</li>
+      <li>Phone: 0000 000 00 00</li>
+    </ul>
+
+  </div>
+
+</div>
+</section>
+
+    <script>
+      $( function() {
+        $( "#accordion" ).accordion();
+      } );
+      $(document).ready(function() {
+        $("section h3").css("background-color", "#d5ccc2");
+        $("section h3").css("border","#d5ccc2");
+        $("div").css("font-family"," 'Ysabeau Infant', sans-serif");
+        $("div").css("font-size","1.2rem");
+        $("section").css("padding","2rem");
+
+      });
+      </script> 
+{% endblock %}
+
